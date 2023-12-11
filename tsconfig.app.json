@@ -1,0 +1,32 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "src/ui/env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "src/plugin/**/*",
+    "src/common/**/*"
+  ],
+  "exclude": [
+    "src/**/__tests__/*"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@common/*": [
+        "./src/common/*"
+      ],
+      "@ui/*": [
+        "./src/ui/*"
+      ],
+      "@plugin/*": [
+        "./src/plugin/*"
+      ]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@figma"
+    ]
+  }
+}
